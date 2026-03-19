@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organic Partition Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="controls">
+        <h1>Organic Partition Generator</h1>
+        <p>
+          This version starts from one rotated rectangle, lays down random splitting
+          strokes across it, smooths the resulting corner junctions, and fills the
+          closed cells with boundary-aware procedural patterns.
+        </p>
+        <p class="seed-row">Seed: <span id="seedLabel">—</span></p>
+        <div class="buttons">
+          <button id="newSeed">New Seed</button>
+          <button id="sameSeed">Rerender</button>
+          <button id="saveBtn">Save PNG</button>
+        </div>
+        <p class="hint">
+          Press <strong>N</strong> for a new seed, <strong>R</strong> to rerender the
+          current one, and <strong>S</strong> to save.
+        </p>
+      </section>
+      <section id="canvas-host" class="canvas-host"></section>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
